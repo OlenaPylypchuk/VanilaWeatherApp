@@ -1,2 +1,1 @@
-alert ("HI");
-alert ("Bye");
+alert ("hi");
