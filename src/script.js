@@ -1,1 +1,2 @@
-prompt ("how");
+alert ("HI");
+alert ("Bye");
