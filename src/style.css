@@ -1,3 +1,41 @@
-h1 {
-    color: blue;
+.weatherApp {
+    max-width: 800px;
+    margin: 30px auto
+    border: 
+
+}
+body {
+    font-family: arial,sans-serif;
+    clear: both;
+    margin-left: 0;
+    padding-top: 20px;
+    
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100vh;
+}
+.container {
+    border: 10px;
+    border-color: gray;
+}
+h1{
+   margin-bottom: 0;
+    font-size:24px ;
+    font-family: arial,sans-serif;
+    color: grey;
+
+}
+#description {
+    margin:auto;
+   
+}
+small {
+    margin-top: 20px;
+}
+li {
+    list-style: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
 }
