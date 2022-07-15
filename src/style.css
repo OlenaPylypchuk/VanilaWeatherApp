@@ -1,9 +1,11 @@
-.weatherApp {
+.weatherWrapp {
     max-width: 800px;
-    margin: 30px auto
-    border: 
-
-}
+    margin: 30px auto;
+  }
+  .weatherApp {
+   border: 1px solid #dadded;
+   padding: 10px;
+  }
 body {
     font-family: arial,sans-serif;
     clear: both;
@@ -31,11 +33,51 @@ h1{
 }
 small {
     margin-top: 20px;
+    padding-top: 40px;
 }
 li {
     list-style: none;
+    color: grey;
 }
 ul {
     margin: 0;
     padding: 0;
+}
+.row strong {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+
+  line-height: 1;
+  position: relative
+}
+.row img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+  position: relative;
+  bottom: 20px;
+
+}
+.col-6 img {
+    display: inline-block;
+ 
+    
+}
+#items {
+      position: relative;
+  font-size: 16px;
+  top: -34px;
+}
+#location {
+    margin-bottom: 20px;
+}
+#celsium {
+    text-decoration: none;
+    font-size: 16px;
+}
+#fahrenheit {
+    text-decoration: none;
+    font-size: 16px;
 }

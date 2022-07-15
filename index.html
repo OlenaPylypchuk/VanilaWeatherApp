@@ -11,12 +11,13 @@
 </head>
 <body>
         <div class="container">
+            <div class="weatherWrapp">
         <div class="weatherApp">
     
     <h1>
         Lviv, Ukraine
     </h1>
-    <ul>
+    <ul id="location">
         <li>
             Tuesday, 12/07/22
         </li>
@@ -28,11 +29,16 @@
         </li>
     </ul>
     <div class="row">
-    <div        class="col-6">
+    <div  class="col-6" id="img">
         
               <img src="https://ssl.gstatic.com/onebox/weather/128/partly_cloudy.png" alt="rain_light">  
             
-                16 ˚C | ˚F
+               <strong>16</strong> 
+               <span id="items">
+               <a href="#" id="celsium"> ˚C </a>
+                | 
+                <a href="#" id="farehnheit"> ˚F </a>
+            </span> 
             
        
     </div>
@@ -51,11 +57,12 @@
     </div>
      
      </div>
+     </div>
     <small>
        <a href="https://github.com/OlenaPylypchuk/VanilaWeatherApp">Open-source code</a> , by Olena Pylypchuk
     </small>
+    </div>
    
-   </div>
   
   <script src="src/script.js"></script>  
     </div>
