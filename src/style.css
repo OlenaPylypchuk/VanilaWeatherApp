@@ -72,6 +72,7 @@ ul {
 }
 #location {
     margin-bottom: 20px;
+    text-transform: capitalize;
 }
 #celsium {
     text-decoration: none;
