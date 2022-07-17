@@ -63,25 +63,28 @@ let humidityElement = document.querySelector ("#humidity");
 humidityElement.innerHTML = (response.data.main.humidity);
 
 console.log (response.data)
-
 }
-let city = "Kherson";
+
+
+function search (city) {
 let apiKey ="2b253ae4d48093bcb55a56d6a42d8fa1";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-
 axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit (event) {
+event.preventDefault();
+let cityInputElement = document.querySelector ("#enterCity");
+console.log (cityInputElement.value);
+search (cityInputElement.value);
+}
+
+search ("New York");
 
 
 
-
-
-
-
-
-
-
-
+let form = document.querySelector("#search");
+form.addEventListener ("submit", handleSubmit);
 
 
 

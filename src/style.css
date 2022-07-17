@@ -21,7 +21,7 @@ body {
     border-color: gray;
 }
 h1{
-   margin-bottom: 0;
+   margin-bottom: 10px;
     font-size:24px ;
     font-family: arial,sans-serif;
     color: grey;
@@ -29,6 +29,7 @@ h1{
 }
 #description {
     margin:auto;
+    
    
 }
 small {
@@ -42,6 +43,8 @@ li {
 ul {
     margin: 0;
     padding: 0;
+    position: relative;
+    bottom: 10px;
 }
 .row strong {
   color: rgb(33, 33, 33);
@@ -84,4 +87,14 @@ ul {
 }
 #signature {
     font-size: 10px;
+}
+#search {
+    display: inline-block;
+    margin-bottom: 10px;
+    box-sizing: content-box;
+    height: 1;
+}
+.btn {
+    line-height: 1;
+    margin-left: 20px;
 }
