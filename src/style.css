@@ -98,3 +98,10 @@ ul {
     line-height: 1;
     margin-left: 20px;
 }
+.todayWeather .active {
+    color: rgb(33, 33, 33);
+    cursor: default;
+}
+.todayWeather .active:hover {
+    text-decoration: underline;
+}

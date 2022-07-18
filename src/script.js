@@ -53,6 +53,8 @@ let iconcode = (response.data.weather[0].icon);
 iconElement.setAttribute ("src", `http://openweathermap.org/img/wn/${iconcode}.png`);
 iconElement.setAttribute ("alt", response.data.weather[0].description)
 
+celsiumTemp = response.data.main.temp;
+
 let temperature = document.querySelector ("#todayTemperature");
 temperature.innerHTML = Math.round(response.data.main.temp);
 
@@ -79,13 +81,40 @@ console.log (cityInputElement.value);
 search (cityInputElement.value);
 }
 
-search ("New York");
+
 
 
 
 let form = document.querySelector("#search");
 form.addEventListener ("submit", handleSubmit);
 
+
+function pickFahrenheit(event) {
+event.preventDefault();
+let fahrTemp = (celsiumTemp * 9) / 5 + 32;
+let temperatureElement = document.querySelector ("#todayTemperature");
+temperatureElement.innerHTML = Math.round(fahrTemp);
+celsius.classList.remove ("active");
+fahrenheit.classList.add("active") ;        
+}
+
+let celsiumTemp = null;
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", pickFahrenheit);
+
+function pickCelsius (event) {
+event.preventDefault();
+let temperatureElement = document.querySelector ("#todayTemperature");
+temperatureElement.innerHTML = Math.round(celsiumTemp);
+fahrenheit.classList.remove ("active");
+celsius.classList.add("active") ;           
+}
+
+let celsius = document.querySelector("#celsium");
+celsius.addEventListener("click", pickCelsius);
+
+search ("New York");
 
 
 
