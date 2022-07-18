@@ -64,6 +64,8 @@ windElement.innerHTML = (response.data.wind.speed);
 let humidityElement = document.querySelector ("#humidity");
 humidityElement.innerHTML = (response.data.main.humidity);
 
+let feelElement = document.querySelector ("#feels");
+feelElement.innerHTML = Math.round(response.data.main.feels_like);
 console.log (response.data)
 }
 
