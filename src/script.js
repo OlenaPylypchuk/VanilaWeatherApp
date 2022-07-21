@@ -33,7 +33,8 @@ function formateDate (timestamp) {
     
     }
 
-    function displayForecast () {
+    function displayForecast (response) {
+        console.log (response.data.daily);
    let forecastElement = document.querySelector("#forecast");
    let forecastHTML = `<div class="row">`;
    let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
@@ -62,6 +63,15 @@ function formateDate (timestamp) {
    forecastElement.innerHTML = forecastHTML;
       
     }
+
+    function getForecast (coordinates) {
+        console.log (coordinates);
+        let apiKey ="2b253ae4d48093bcb55a56d6a42d8fa1";  
+        let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+    console.log (apiUrl);
+    axios.get(apiUrl).then(displayForecast);
+    }
+
 
 function displayTemperature (response) {
     let cityLocation = document.querySelector ("#citylocation");
@@ -93,8 +103,11 @@ windElement.innerHTML = (response.data.wind.speed);
 let humidityElement = document.querySelector ("#humidity");
 humidityElement.innerHTML = (response.data.main.humidity);
 
-console.log (response.data)
+console.log (response.data);
+
+getForecast (response.data.coord);
 }
+
 
 
 function search (city) {
@@ -111,9 +124,6 @@ search (cityInputElement.value);
 }
 
 
-
-
-
 let form = document.querySelector("#search");
 form.addEventListener ("submit", handleSubmit);
 
@@ -126,6 +136,8 @@ temperatureElement.innerHTML = Math.round(fahrTemp);
 celsius.classList.remove ("active");
 fahrenheit.classList.add("active") ;        
 }
+
+
 
 let celsiumTemp = null;
 
@@ -143,7 +155,9 @@ celsius.classList.add("active") ;
 let celsius = document.querySelector("#celsium");
 celsius.addEventListener("click", pickCelsius);
 
-displayForecast();
+
+
+
 
 search ("New York");
 
